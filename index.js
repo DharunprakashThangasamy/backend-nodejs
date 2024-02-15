@@ -1,8 +1,12 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const Product = require('./models/productModel')
+const cors = require("cors");
+
 const app = express()
 
+
+app.use(cors())
 app.use(express.json())
 
 //routes
@@ -94,7 +98,7 @@ app.delete('/product/:id',async(req,res) => {
 mongoose.connect('mongodb+srv://prakashdharun11:Elonmusk@productapi.xtnbhss.mongodb.net/Product-API?retryWrites=true&w=majority')
 .then(() => {
     console.log('connected to MongoDB')
-    app.listen(3000, () => {
+    app.listen(3001, () => {
         console.log(`application connected to port number 3000...`)
     })
 }).catch((error) => {

@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const productSchema = mongoose.Schema(
     {
         productId : {
-            type : Number,
+            type : String,
             required : [true, "Please enter the productId"]
         },
         productName : {
@@ -11,12 +11,12 @@ const productSchema = mongoose.Schema(
             required : [true, "Please enter the product Name"]
         },
         productPrice : {
-            type : Number,
+            type : String,
             required : true,
             default : 0
         },
         productQuantity : {
-            type : Number,
+            type : String,
             required : true,
             default : 0
         },
